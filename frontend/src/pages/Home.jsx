@@ -34,6 +34,11 @@ const Home = () => {
                             {products.map((product) => (
                                 <div key={product.id} className="column is-4">
                                     <div className="card">
+                                        <div className="card-image">
+                                            <figure className="image is-4by3">
+                                                <img src={product.image} alt={product.name} />
+                                            </figure>
+                                        </div>
                                         <div className="card-content">
                                             <h3 className="title is-5">{product.name}</h3>
                                             <p className="subtitle is-6">Precio: ${product.price}</p>
