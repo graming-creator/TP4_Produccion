@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL_API = "http://localhost:3000/api/products";
+const BASE_URL_API = "mongodb+srv://graming212121:Rco7TIJUO6r4TEve@proyecto1.dnqii.mongodb.net/asd?retryWrites=true&w=majority&appName=Proyecto1";
 
 // Obtener productos
 const getAllProducts = async () => {
