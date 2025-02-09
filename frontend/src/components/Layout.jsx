@@ -9,9 +9,6 @@ const Layout = ({ children }) => {
       <nav className="navbar is-primary">
         <div className="container">
           <div className="navbar-brand">
-            <Link to="/" className="navbar-item has-text-white">MyApp</Link>
-          </div>
-          <div className="navbar-brand">
             <div className="navbar-end">
               <Link to="/" className="navbar-item has-text-white">Home</Link>
               <Link to="/dashboard" className="navbar-item has-text-white">Dashboard</Link>
