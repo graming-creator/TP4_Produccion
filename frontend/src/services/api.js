@@ -1,11 +1,10 @@
 import axios from "axios";
 
-const BASE_URL_API = "mongodb+srv://graming212121:Rco7TIJUO6r4TEve@proyecto1.dnqii.mongodb.net/asd?retryWrites=true&w=majority&appName=Proyecto1";
-
+const URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:3000/api/products"
 // Obtener productos
 const getAllProducts = async () => {
     try {
-        const response = await axios.get(BASE_URL_API);
+        const response = await axios.get(URL);
         return response.data;
     } catch (error) {
         console.error(error);
@@ -15,7 +14,7 @@ const getAllProducts = async () => {
 // Crear producto
 const createProduct = async (product) => {
     try {
-        const response = await axios.post(BASE_URL_API, product);
+        const response = await axios.post(URL, product);
         return response.data;
     } catch (error) {
         console.error(error);
@@ -25,7 +24,7 @@ const createProduct = async (product) => {
 // Modificar producto
 const updateProduct = async (productId, updatedProduct) => {
     try {
-        const response = await axios.patch(`${BASE_URL_API}/${productId}`, updatedProduct);
+        const response = await axios.patch(`${URL}/${productId}`, updatedProduct);
         return response.data;
     } catch (error) {
         console.error(error);
@@ -35,7 +34,7 @@ const updateProduct = async (productId, updatedProduct) => {
 // Borrar producto
 const deleteProduct = async (productId) => {
     try {
-        await axios.delete(`${BASE_URL_API}/${productId}`);
+        await axios.delete(`${URL}/${productId}`);
     } catch (error) {
         console.error(error);
     }
